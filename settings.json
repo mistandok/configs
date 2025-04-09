@@ -1,0 +1,127 @@
+{
+    // =============================================
+    // VIM-RELATED SETTINGS
+    // =============================================
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 300,
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+  
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+  
+    "vim.normalModeKeyBindings": [
+      // Навигация между окнами (аналог <C-w>hjkl)
+      {
+        "before": ["<C-k>"],
+        "after": ["<C-w>", "k"]
+      },
+      {
+        "before": ["<C-j>"],
+        "after": ["<C-w>", "j"]
+      },
+      {
+        "before": ["<C-h>"],
+        "after": ["<C-w>", "h"]
+      },
+      {
+        "before": ["<C-l>"],
+        "after": ["<C-w>", "l"]
+      },
+  
+      // Переключение табов
+      {
+        "before": ["<leader>", "h"],
+        "commands": [{ "command": "workbench.action.previousEditor" }]
+      },
+      {
+        "before": ["<leader>", "l"],
+        "commands": [{ "command": "workbench.action.nextEditor" }]
+      },
+  
+      // Документация
+      {
+        "before": ["K"],
+        "commands": [{ "command": "editor.action.showHover" }]
+      },
+  
+      // Перемещение строк
+      {
+        "before": ["<leader>", "j"],
+        "commands": [{ "command": "editor.action.moveLinesDownAction" }]
+      },
+      {
+        "before": ["<leader>", "k"],
+        "commands": [{ "command": "editor.action.moveLinesUpAction" }]
+      },
+  
+      // Навигация по коду
+      {
+        "before": ["g", "i"],
+        "commands": [{ "command": "editor.action.goToImplementation" }]
+      },
+      {
+        "before": ["g", "s"],
+        "commands": [{ "command": "editor.action.goToSuperMethod" }]
+      },
+      {
+        "before": ["g", "h"],
+        "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
+      },
+  
+      // Рефакторинг
+      {
+        "before": ["<leader>", "l", "r"],
+        "commands": [{ "command": "editor.action.rename" }]
+      },
+  
+      // Управление редактором
+      {
+        "before": ["<leader>", "\\"],
+        "commands": [{ "command": "workbench.action.splitEditor" }]
+      },
+      {
+        "before": ["<leader>", "x"],
+        "commands": [{ "command": "workbench.action.closeOtherEditors" }]
+      },
+      {
+        "before": ["<leader>", "c", "x"],
+        "commands": [{ "command": "workbench.action.closeActiveEditor" }]
+      },
+      {
+        "before": ["<leader>", "e"],
+        "commands": [{ "command": "workbench.view.explorer" }]
+      }
+    ],
+  
+    // =============================================
+    // EDITOR & WORKBENCH SETTINGS
+    // =============================================
+    "window.commandCenter": 1,
+    "window.title": "${activeEditorLong}${separator}${rootName}${separator}${profileName}",
+    
+    "editor.lineNumbers": "relative",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.folding": true,
+    "editor.showFoldingControls": "always",
+    "editor.foldingStrategy": "auto",
+  
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.colorTheme": "Night Owl",
+    "workbench.colorCustomizations": {
+      "[Night Owl]": {
+        "sideBar.border": "#2c4f6e",
+        "sideBar.borderWidth": "1px",
+        "sideBar.dropBackground": "#00000020"
+      }
+    },
+  
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+}

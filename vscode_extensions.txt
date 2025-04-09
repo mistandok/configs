@@ -1,0 +1,13 @@
+42crunch.vscode-openapi
+avito-platform-x-dev.paas-vscode-plugin
+ckolkman.vscode-postgres
+golang.go
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+reda-salmi.night-owl-x-one-dark
+redhat.vscode-yaml
+sdras.night-owl
+tamasfe.even-better-toml
+vscodevim.vim
+waderyan.gitblame

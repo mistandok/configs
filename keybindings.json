@@ -41,4 +41,56 @@
         "command": "filesExplorer.paste",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
+      {
+        "key": "cmd+m",
+        "command": "workbench.action.toggleAuxiliaryBar"
+      },
+      {
+        "key": "alt+cmd+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+      },
+      {
+        "key": "cmd+u",
+        "command": "workbench.action.toggleSidebarVisibility"
+      },
+      {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+      },
+      {
+        "key": "ctrl+tab",
+        "command": "editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab"
+      },
+      {
+        "key": "tab",
+        "command": "-editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab"
+      },
+      {
+        "key": "ctrl+tab",
+        "command": "editor.action.acceptGPT4",
+        "when": "hasGPT4Diff"
+      },
+      {
+        "key": "tab",
+        "command": "-editor.action.acceptGPT4",
+        "when": "hasGPT4Diff"
+      },
+      {
+        "key": "shift+cmd+l",
+        "command": "workbench.action.decreaseViewWidth"
+      },
+      {
+        "key": "shift+cmd+h",
+        "command": "workbench.action.increaseViewWidth"
+      },
+      {
+        "key": "shift+cmd+k",
+        "command": "workbench.action.decreaseViewHeight"
+      },
+      {
+        "key": "shift+cmd+j",
+        "command": "workbench.action.increaseViewHeight"
+      },
 ]

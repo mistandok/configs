@@ -1,127 +1,213 @@
 {
-    // =============================================
-    // VIM-RELATED SETTINGS
-    // =============================================
-    "vim.leader": " ",
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": true,
-    "vim.easymotion": true,
-    "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.duration": 300,
-    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
-  
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ],
-  
-    "vim.normalModeKeyBindings": [
-      // Навигация между окнами (аналог <C-w>hjkl)
-      {
-        "before": ["<C-k>"],
-        "after": ["<C-w>", "k"]
-      },
-      {
-        "before": ["<C-j>"],
-        "after": ["<C-w>", "j"]
-      },
-      {
-        "before": ["<C-h>"],
-        "after": ["<C-w>", "h"]
-      },
-      {
-        "before": ["<C-l>"],
-        "after": ["<C-w>", "l"]
-      },
-  
-      // Переключение табов
-      {
-        "before": ["<leader>", "h"],
-        "commands": [{ "command": "workbench.action.previousEditor" }]
-      },
-      {
-        "before": ["<leader>", "l"],
-        "commands": [{ "command": "workbench.action.nextEditor" }]
-      },
-  
-      // Документация
-      {
-        "before": ["K"],
-        "commands": [{ "command": "editor.action.showHover" }]
-      },
-  
-      // Перемещение строк
-      {
-        "before": ["<leader>", "j"],
-        "commands": [{ "command": "editor.action.moveLinesDownAction" }]
-      },
-      {
-        "before": ["<leader>", "k"],
-        "commands": [{ "command": "editor.action.moveLinesUpAction" }]
-      },
-  
-      // Навигация по коду
-      {
-        "before": ["g", "i"],
-        "commands": [{ "command": "editor.action.goToImplementation" }]
-      },
-      {
-        "before": ["g", "s"],
-        "commands": [{ "command": "editor.action.goToSuperMethod" }]
-      },
-      {
-        "before": ["g", "h"],
-        "commands": [{ "command": "editor.action.showDefinitionPreviewHover" }]
-      },
-  
-      // Рефакторинг
-      {
-        "before": ["<leader>", "l", "r"],
-        "commands": [{ "command": "editor.action.rename" }]
-      },
-  
-      // Управление редактором
-      {
-        "before": ["<leader>", "\\"],
-        "commands": [{ "command": "workbench.action.splitEditor" }]
-      },
-      {
-        "before": ["<leader>", "x"],
-        "commands": [{ "command": "workbench.action.closeOtherEditors" }]
-      },
-      {
-        "before": ["<leader>", "c", "x"],
-        "commands": [{ "command": "workbench.action.closeActiveEditor" }]
-      },
-      {
-        "before": ["<leader>", "e"],
-        "commands": [{ "command": "workbench.view.explorer" }]
-      }
-    ],
-  
-    // =============================================
-    // EDITOR & WORKBENCH SETTINGS
-    // =============================================
-    "window.commandCenter": 1,
-    "window.title": "${activeEditorLong}${separator}${rootName}${separator}${profileName}",
-    
-    "editor.lineNumbers": "relative",
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "editor.folding": true,
-    "editor.showFoldingControls": "always",
-    "editor.foldingStrategy": "auto",
-  
-    "workbench.activityBar.orientation": "vertical",
-    "workbench.colorTheme": "Night Owl",
-    "workbench.colorCustomizations": {
-      "[Night Owl]": {
-        "sideBar.border": "#2c4f6e",
-        "sideBar.borderWidth": "1px",
-        "sideBar.dropBackground": "#00000020"
-      }
+  // =============================================
+  // EDITOR SETTINGS
+  // =============================================
+  "cursor.cpp.disabledLanguages": ["plaintext"],
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "editor.folding": true,
+  "editor.foldingStrategy": "auto",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.lineNumbers": "relative",
+  "editor.showFoldingControls": "always",
+
+  // =============================================
+  // VIM SETTINGS
+  // =============================================
+  "vim.easymotion": true,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+  "vim.highlightedyank.duration": 300,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.leader": " ",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
     },
-  
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": [
+        {
+          "command": "editor.action.showDefinitionPreviewHover"
+        }
+      ]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": [
+        {
+          "command": "editor.action.goToImplementation"
+        }
+      ]
+    },
+    {
+      "before": ["g", "s"],
+      "commands": [
+        {
+          "command": "editor.action.goToSuperMethod"
+        }
+      ]
+    },
+    {
+      "before": ["K"],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "\\"],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "c", "x"],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": [
+        {
+          "command": "workbench.view.explorer"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesDownAction"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesUpAction"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": [
+        {
+          "command": "workbench.action.closeOtherEditors"
+        }
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+
+  // =============================================
+  // WORKBENCH SETTINGS
+  // =============================================
+  "window.commandCenter": 1,
+  "window.title": "${activeEditorLong}${separator}${rootName}${separator}${profileName}",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.colorCustomizations": {
+    "[Night Owl]": {
+      "sideBar.border": "#2c4f6e",
+      "sideBar.borderWidth": "1px",
+      "sideBar.dropBackground": "#00000020"
+    }
+  },
+  "workbench.colorTheme": "Night Owl",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.revealIfOpen": false,
+  "workbench.tree.indent": 15,
+
+  // =============================================
+  // TERMINAL SETTINGS
+  // =============================================
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+
+  // =============================================
+  // PYTHON SETTINGS
+  // =============================================
+  "python.analysis.typeCheckingMode": "strict",
+
+  // =============================================
+  // AVITO SCHEMAS
+  // =============================================
+  "evenBetterToml.schema.associations": {
+    "(([^/]*(/|$))*)actions\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/actions.toml.json",
+    "alert\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/alert.yaml.json",
+    "app\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/app.toml.json",
+    "auth\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/auth.toml.json",
+    "autocanary\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/autocanary.yaml.json",
+    "backoffice\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/backoffice.yaml.json",
+    "(([^/]*(/|$))*)boilerplate\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json",
+    "\\.boilerplates\\/([^/]*)\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json",
+    "(([^/]*(/|$))*)codegen\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/codegen.toml.json",
+    "databases\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/databases.toml.json",
+    "libs\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/libs.toml.json",
+    "nfr\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/nfr.toml.json",
+    "updates\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/updates.toml.json"
+  },
+  "yaml.schemas": {
+    "file:///Users/akartikov/.avito/json_schemas/schemas/actions.toml.json": ["**/actions.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/alert.yaml.json": ["alert.yaml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/app.toml.json": ["app.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/auth.toml.json": ["auth.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/autocanary.yaml.json": ["autocanary.yaml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/backoffice.yaml.json": ["backoffice.yaml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json": ["**/boilerplate.yaml", ".boilerplates/*.yaml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/codegen.toml.json": ["**/codegen.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/databases.toml.json": ["databases.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/libs.toml.json": ["libs.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/nfr.toml.json": ["nfr.toml"],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/updates.toml.json": ["updates.toml"]
+  }
 }

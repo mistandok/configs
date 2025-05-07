@@ -1,5 +1,5 @@
 Для экспорта настроек из файла
 
 ```
-code --list-extensions | jq -R -n '[inputs | {name: .}]' > vscode_extensions.json
+cat vscode_xtensions.txt | xargs -L 1 code --install-extension
 ```

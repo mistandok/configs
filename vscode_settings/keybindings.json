@@ -1,0 +1,96 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+      "key": "cmd+i",
+      "command": "composerMode.agent"
+  },
+  {
+      // Special case: when in file explorer, go right (back to 1st open
+      // editor group)
+      "key": "ctrl+l",
+      "command": "workbench.action.focusFirstEditorGroup",
+      "when": "filesExplorerFocus"
+  },
+  {
+      "key": "a",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "f",
+      "command": "explorer.newFolder",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "x",
+      "command": "filesExplorer.cut",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "y",
+      "command": "filesExplorer.copy",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+      "key": "p",
+      "command": "filesExplorer.paste",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "cmd+m",
+      "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+      "key": "alt+cmd+b",
+      "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+    {
+      "key": "cmd+u",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "ctrl+tab",
+      "command": "editor.action.acceptCursorTabSuggestion",
+      "when": "cpp.shouldAcceptTab"
+    },
+    {
+      "key": "tab",
+      "command": "-editor.action.acceptCursorTabSuggestion",
+      "when": "cpp.shouldAcceptTab"
+    },
+    {
+      "key": "ctrl+tab",
+      "command": "editor.action.acceptGPT4",
+      "when": "hasGPT4Diff"
+    },
+    {
+      "key": "tab",
+      "command": "-editor.action.acceptGPT4",
+      "when": "hasGPT4Diff"
+    },
+    {
+      "key": "shift+cmd+l",
+      "command": "workbench.action.decreaseViewWidth"
+    },
+    {
+      "key": "shift+cmd+h",
+      "command": "workbench.action.increaseViewWidth"
+    },
+    {
+      "key": "shift+cmd+k",
+      "command": "workbench.action.decreaseViewHeight"
+    },
+    {
+      "key": "shift+cmd+j",
+      "command": "workbench.action.increaseViewHeight"
+    },
+]

@@ -1,0 +1,325 @@
+{
+  // =============================================
+  // VIM-RELATED SETTINGS
+  // =============================================
+  "vim.leader": " ",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 300,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    // Навигация между окнами (аналог <C-w>hjkl)
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    },
+    // Переключение табов
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.previousEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.nextEditor"
+        }
+      ]
+    },
+    // Документация
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    // Перемещение строк
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesDownAction"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.moveLinesUpAction"
+        }
+      ]
+    },
+    // Навигация по коду
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.goToImplementation"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.goToSuperMethod"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.showDefinitionPreviewHover"
+        }
+      ]
+    },
+    // Рефакторинг
+    {
+      "before": [
+        "<leader>",
+        "l",
+        "r"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.rename"
+        }
+      ]
+    },
+    // Управление редактором
+    {
+      "before": [
+        "<leader>",
+        "\\"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.splitEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.closeOtherEditors"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "x"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        {
+          "command": "workbench.view.explorer"
+        }
+      ]
+    }
+  ],
+  // =============================================
+  // EDITOR & WORKBENCH SETTINGS
+  // =============================================
+  "window.commandCenter": 1,
+  "window.title": "${activeEditorLong}${separator}${rootName}${separator}${profileName}",
+  "editor.lineNumbers": "relative",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.folding": true,
+  "editor.showFoldingControls": "always",
+  "editor.foldingStrategy": "auto",
+  "editor.scrollbar.horizontalScrollbarSize": 5,
+  "editor.scrollbar.verticalScrollbarSize": 5,
+  "cursor.cpp.enablePartialAccepts": true,
+  "files.autoSave": "onFocusChange",
+  
+  "explorer.compactFolders": false,
+  "workbench.editor.revealIfOpen": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.activityBar.orientation": "horizontal",
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+  "workbench.colorCustomizations": {
+    "[Night Owl]": {
+      "sideBar.border": "#00000050",  // Полупрозрачная чёрная граница
+      "sideBarSectionHeader.border": "#00000020"
+    },
+    "[Winter is Coming (Dark Blue)]": {
+        "statusBar.background": "#042F5A",
+    }
+  },
+  "workbench.tree.indent": 8,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "zenMode.hideLineNumbers": false,
+  "zenMode.centerLayout": false,
+  "workbench.editor.tabActionCloseVisibility": false,
+
+
+  // =============================================
+  // PYTHON SETTINGS
+  // =============================================
+  "python.analysis.typeCheckingMode": "strict",
+
+  // =============================================
+  // AVITO PLUGIN SCHEMAS
+  // =============================================
+  "evenBetterToml.schema.associations": {
+    "(([^/]*(/|$))*)actions\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/actions.toml.json",
+    "alert\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/alert.yaml.json",
+    "app\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/app.toml.json",
+    "auth\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/auth.toml.json",
+    "autocanary\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/autocanary.yaml.json",
+    "backoffice\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/backoffice.yaml.json",
+    "(([^/]*(/|$))*)boilerplate\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json",
+    "\\.boilerplates\\/([^/]*)\\.yaml": "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json",
+    "(([^/]*(/|$))*)codegen\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/codegen.toml.json",
+    "databases\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/databases.toml.json",
+    "libs\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/libs.toml.json",
+    "nfr\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/nfr.toml.json",
+    "updates\\.toml": "file:///Users/akartikov/.avito/json_schemas/schemas/updates.toml.json"
+  },
+  "yaml.schemas": {
+    "file:///Users/akartikov/.avito/json_schemas/schemas/actions.toml.json": [
+      "**/actions.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/alert.yaml.json": [
+      "alert.yaml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/app.toml.json": [
+      "app.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/auth.toml.json": [
+      "auth.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/autocanary.yaml.json": [
+      "autocanary.yaml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/backoffice.yaml.json": [
+      "backoffice.yaml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/boilerplate.yaml.json": [
+      "**/boilerplate.yaml",
+      ".boilerplates/*.yaml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/codegen.toml.json": [
+      "**/codegen.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/databases.toml.json": [
+      "databases.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/libs.toml.json": [
+      "libs.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/nfr.toml.json": [
+      "nfr.toml"
+    ],
+    "file:///Users/akartikov/.avito/json_schemas/schemas/updates.toml.json": [
+      "updates.toml"
+    ]
+  },
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.cpp.disabledLanguages": [
+    "plaintext"
+  ],
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.iconTheme": "symbols",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+
+  "vscode_custom_css.imports": [
+    "file:///Users/akartikov/work/learning_projects/vscode_config/vscode-custom.css"
+  ],
+  "goTestExplorer.logpanel": true,
+  "editor.accessibilitySupport": "on",
+}

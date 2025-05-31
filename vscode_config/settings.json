@@ -58,29 +58,6 @@
         "l"
       ]
     },
-    // Переключение табов
-    {
-      "before": [
-        "<leader>",
-        "h"
-      ],
-      "commands": [
-        {
-          "command": "workbench.action.previousEditor"
-        }
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "l"
-      ],
-      "commands": [
-        {
-          "command": "workbench.action.nextEditor"
-        }
-      ]
-    },
     // Документация
     {
       "before": [

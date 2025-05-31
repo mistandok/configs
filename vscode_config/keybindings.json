@@ -93,4 +93,40 @@
       "key": "shift+cmd+j",
       "command": "workbench.action.increaseViewHeight"
     },
+    {
+      "key": "shift+l",
+      "command": "workbench.action.nextEditorInGroup",
+      "when": "vim.mode == 'Normal'"
+    },
+    {
+      "key": "cmd+r alt+cmd+right",
+      "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+      "key": "shift+h",
+      "command": "workbench.action.previousEditorInGroup",
+      "when": "vim.mode == 'Normal'"
+    },
+    {
+      "key": "cmd+r alt+cmd+left",
+      "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+      "key": "shift+w",
+      "command": "workbench.action.moveEditorToNextGroup",
+      "when": "vim.mode == 'Normal'"
+    },
+    {
+      "key": "ctrl+cmd+right",
+      "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+      "key": "shift+q",
+      "command": "workbench.action.moveEditorToPreviousGroup",
+      "when": "vim.mode == 'Normal'"
+    },
+    {
+      "key": "ctrl+cmd+left",
+      "command": "-workbench.action.moveEditorToPreviousGroup"
+    }
 ]

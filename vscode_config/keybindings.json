@@ -112,7 +112,7 @@
       "command": "-workbench.action.previousEditorInGroup"
     },
     {
-      "key": "shift+w",
+      "key": "shift+f",
       "command": "workbench.action.moveEditorToNextGroup",
       "when": "vim.mode == 'Normal'"
     },
@@ -121,7 +121,7 @@
       "command": "-workbench.action.moveEditorToNextGroup"
     },
     {
-      "key": "shift+q",
+      "key": "shift+d",
       "command": "workbench.action.moveEditorToPreviousGroup",
       "when": "vim.mode == 'Normal'"
     },

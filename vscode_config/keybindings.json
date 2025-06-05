@@ -96,7 +96,7 @@
     {
       "key": "shift+l",
       "command": "workbench.action.nextEditorInGroup",
-      "when": "vim.mode == 'Normal'"
+      "when": "vim.mode == 'Normal' && !renameInputVisible && editorTextFocus"
     },
     {
       "key": "cmd+r alt+cmd+right",
@@ -105,7 +105,7 @@
     {
       "key": "shift+h",
       "command": "workbench.action.previousEditorInGroup",
-      "when": "vim.mode == 'Normal'"
+      "when": "vim.mode == 'Normal' && !renameInputVisible && editorTextFocus"
     },
     {
       "key": "cmd+r alt+cmd+left",
@@ -114,7 +114,7 @@
     {
       "key": "shift+f",
       "command": "workbench.action.moveEditorToNextGroup",
-      "when": "vim.mode == 'Normal'"
+      "when": "vim.mode == 'Normal' && !renameInputVisible && editorTextFocus"
     },
     {
       "key": "ctrl+cmd+right",
@@ -123,7 +123,7 @@
     {
       "key": "shift+d",
       "command": "workbench.action.moveEditorToPreviousGroup",
-      "when": "vim.mode == 'Normal'"
+      "when": "vim.mode == 'Normal' && !renameInputVisible && editorTextFocus"
     },
     {
       "key": "ctrl+cmd+left",

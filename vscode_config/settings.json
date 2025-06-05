@@ -220,6 +220,8 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.centerLayout": false,
   "workbench.editor.tabActionCloseVisibility": false,
+  "window.openFoldersInNewWindow": "on",
+  "window.newWindowDimensions": "inherit",
 
 
   // =============================================

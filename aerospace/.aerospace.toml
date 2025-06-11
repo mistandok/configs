@@ -1,0 +1,82 @@
+# Размещать в ~/.aerospace.toml
+
+# AeroSpace конфигурация
+# Основные настройки
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Назначение рабочих пространств к мониторам
+[workspace-to-monitor-force-assignment]
+    1 = 1    # Внешний монитор (Mi Monitor)
+    2 = 1    # Внешний монитор (Mi Monitor)  
+    3 = 1    # Внешний монитор (Mi Monitor)
+    4 = 2    # Встроенный дисплей (Built-in Retina Display)
+    5 = 2    # Встроенный дисплей (Built-in Retina Display)
+    6 = 2    # Встроенный дисплей (Built-in Retina Display)
+    7 = 2    # Встроенный дисплей (Built-in Retina Display)
+
+# Автоматическое назначение приложений к рабочим пространствам
+# Google Chrome в 1 рабочее пространство
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = 'move-node-to-workspace 1'
+
+# Cursor в 2 рабочее пространство
+[[on-window-detected]]
+    if.app-id = 'com.todesktop.230313mzl4w4u92'
+    run = 'move-node-to-workspace 2'
+
+# Mattermost в 4 рабочее пространство
+[[on-window-detected]]
+    if.app-id = 'Mattermost.Desktop'
+    run = 'move-node-to-workspace 4'
+
+# Telegram в 5 рабочее пространство  
+[[on-window-detected]]
+    if.app-id = 'ru.keepcoder.Telegram'
+    run = 'move-node-to-workspace 5'
+
+# Microsoft Outlook в 6 рабочее пространство
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.Outlook'
+    run = 'move-node-to-workspace 6'
+
+# Основные клавиатурные привязки
+[mode.main.binding]
+    # Переключение между рабочими пространствами
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    
+    # Перемещение окон между рабочими пространствами
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-7 = 'move-node-to-workspace 7'
+    
+    # Навигация между окнами
+    alt-h = 'focus left'
+    alt-j = 'focus down'
+    alt-k = 'focus up'
+    alt-l = 'focus right'
+    
+    # Перемещение окон
+    alt-shift-h = 'move left'
+    alt-shift-j = 'move down'
+    alt-shift-k = 'move up'
+    alt-shift-l = 'move right'
+    
+    # Управление режимами окон
+    alt-f = 'fullscreen'
+    alt-s = 'layout floating'
+    alt-t = 'layout tiling'
+    
+    # Перезагрузка конфигурации
+    alt-shift-c = 'reload-config' 

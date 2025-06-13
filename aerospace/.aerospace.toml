@@ -33,7 +33,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 # Telegram в 5 рабочее пространство  
 [[on-window-detected]]
-    if.app-id = 'ru.keepcoder.Telegram'
+    if.app-id = 'com.tdesktop.Telegram'
     run = 'move-node-to-workspace 5'
 
 # Microsoft Outlook в 6 рабочее пространство

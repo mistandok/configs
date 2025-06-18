@@ -73,6 +73,12 @@ enable-normalization-opposite-orientation-for-nested-containers = true
     alt-shift-k = 'move up'
     alt-shift-l = 'move right'
     
+    # Изменение размеров окон
+    alt-ctrl-h = 'resize width -50'
+    alt-ctrl-l = 'resize width +50'
+    alt-ctrl-k = 'resize height -50'
+    alt-ctrl-j = 'resize height +50'
+    
     # Управление режимами окон
     alt-f = 'fullscreen'
     alt-s = 'layout floating'

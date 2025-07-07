@@ -20,6 +20,16 @@
       ]
     },
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ],
   "vim.normalModeKeyBindings": [
     // Навигация между окнами (аналог <C-w>hjkl)
     {
@@ -66,29 +76,6 @@
       "commands": [
         {
           "command": "editor.action.showHover"
-        }
-      ]
-    },
-    // Перемещение строк
-    {
-      "before": [
-        "<leader>",
-        "j"
-      ],
-      "commands": [
-        {
-          "command": "editor.action.moveLinesDownAction"
-        }
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "k"
-      ],
-      "commands": [
-        {
-          "command": "editor.action.moveLinesUpAction"
         }
       ]
     },
@@ -184,7 +171,15 @@
           "command": "workbench.view.explorer"
         }
       ]
-    }
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["editor.action.marker.prevInFiles"]
+    },
   ],
   // =============================================
   // EDITOR & WORKBENCH SETTINGS
@@ -291,14 +286,73 @@
     "plaintext"
   ],
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.smoothScrolling": true,
   "workbench.iconTheme": "symbols",
   "files.exclude": {
     "**/__pycache__": true
   },
 
   "vscode_custom_css.imports": [
-    "file:///Users/akartikov/work/learning_projects/vscode_config/vscode-custom.css"
+    "file:///Users/akartikov/work/configs/vscode_config/vscode_custom.css"
   ],
   "goTestExplorer.logpanel": true,
   "editor.accessibilitySupport": "on",
+  "docker.extension.enableComposeLanguageServer": false,
+  "go.toolsManagement.autoUpdate": true,
+  "extensions.ignoreRecommendations": true,
+
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "go.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.testExplorer.packageDisplayMode": "nested",
+
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "always",
+      "source.organizeImports": "always",
+      "linting.enabled": "always",
+      "lintint.lintOnSave": "always"
+    }
+  },
+  "python.languageServer": "Pylance",
+  "apc.imports": [
+    "file:///Users/akartikov/.cursor/extensions/brandonkirbyson.vscode-animations-2.0.1-universal/dist/updateHandler.js"
+  ],
+  "repomix.output.filePath": "./.repomix/repomix-output.txt",
+  "gitlens.currentLine.enabled": false,
+  "errorLens.messageEnabled": false,
+  "repomix.output.style": "xml",
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "497DC981-C503-414C-8681-B8EF1C2213BD",
+      "isDefault": true
+    }
+  ],
+  "pgsql.connections": [
+    {
+      "id": "B1489F0D-BCC2-4E33-90D4-0B6B8D2EA05E",
+      "groupId": "497DC981-C503-414C-8681-B8EF1C2213BD",
+      "authenticationType": "SqlLogin",
+      "connectTimeout": 15,
+      "applicationName": "vscode-pgsql",
+      "clientEncoding": "utf8",
+      "sslmode": "prefer",
+      "server": "localhost",
+      "user": "postgres",
+      "password": "",
+      "database": "master",
+      "profileName": "mozart",
+      "port": "30166",
+      "hostaddr": "127.0.0.1",
+      "expiresOn": 0,
+      "emptyPasswordInput": true
+    }
+  ]
 }

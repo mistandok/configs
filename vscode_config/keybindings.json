@@ -128,5 +128,35 @@
     {
       "key": "ctrl+cmd+left",
       "command": "-workbench.action.moveEditorToPreviousGroup"
-    }
+    },
+    {
+      "key": "cmd+r",
+      "command": "workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+      "key": "shift+cmd+e",
+      "command": "-workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+      "key": "cmd+n",
+      "command": "workbench.action.pinEditor",
+      "when": "!activeEditorIsPinned"
+    },
+    {
+      "key": "cmd+r shift+enter",
+      "command": "-workbench.action.pinEditor",
+      "when": "!activeEditorIsPinned"
+    },
+    {
+      "key": "cmd+n",
+      "command": "workbench.action.unpinEditor",
+      "when": "activeEditorIsPinned"
+    },
+    {
+      "key": "cmd+r shift+enter",
+      "command": "-workbench.action.unpinEditor",
+      "when": "activeEditorIsPinned"
+    },
 ]
